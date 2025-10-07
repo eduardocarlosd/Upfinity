@@ -1,14 +1,61 @@
-html, body {
+* {
+  box-sizing: border-box;
+}
+body {
   margin: 0;
-  height: 100%;
-  display: grid;
-  place-items: center;
-  background: #111;
-  color: #eee;
-  font-family: system-ui, sans-serif;
+  overflow: hidden;
+  background: linear-gradient(to top, #a0d8f7, #f0f9ff);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  user-select: none;
 }
 canvas {
-  background: #000;
-  border: 2px solid #444;
-  image-rendering: pixelated;
+  display: block;
+  margin: 0 auto;
+  background: #87ceeb;
+  border: 2px solid #333;
+  border-radius: 8px;
+  background-image:
+    radial-gradient(circle at 20% 30%, #fff3, transparent 25%),
+    radial-gradient(circle at 80% 70%, #fff3, transparent 25%);
+}
+#scoreboard {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  color: #333;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px white;
+  z-index: 10;
+}
+#game-over {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  display: none;
+  text-align: center;
+  z-index: 20;
+}
+#game-over h2 {
+  margin: 0 0 20px;
+  color: #444;
+}
+#restart-btn {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #38a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#restart-btn:hover {
+  background-color: #267;
 }
